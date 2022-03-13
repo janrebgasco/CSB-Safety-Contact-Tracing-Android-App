@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">CSB Safety</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string-array name="genderArray">
+        <item>Select Gender</item>
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+    <string-array name="userTypeArray">
+        <item>Select User Type</item>
+        <item>Student</item>
+        <item>Professor</item>
+        <item>Admin</item>
+        <item>Librarian</item>
+        <item>Others</item>
+    </string-array>
+</resources>
