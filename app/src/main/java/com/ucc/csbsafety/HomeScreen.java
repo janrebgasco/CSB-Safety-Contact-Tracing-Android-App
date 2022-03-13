@@ -295,26 +295,6 @@ public class HomeScreen extends AppCompatActivity {
         String endate = new SimpleDateFormat("MMM dd", Locale.getDefault()).format(new Date());
 
         dispDate.setText(startExpDate + "-" +endate);
-//        DatabaseReference ref = FirebaseDatabase.getInstance().getReference("ClosedContact/"+uid);
-//        Query queryUid = ref.orderByKey().limitToFirst(1);
-//        queryUid.addListenerForSingleValueEvent(new ValueEventListener() {
-//            @Override
-//            public void onDataChange(DataSnapshot dataSnapshot) {
-//                for (DataSnapshot postSnapshot : dataSnapshot.getChildren()) {
-//
-//                    String startDate = String.valueOf(postSnapshot.child("date").getValue());
-//                    String endDate = new SimpleDateFormat("MMM dd", Locale.getDefault()).format(new Date());
-//
-//
-//
-//                }
-//            }
-//
-//            @Override
-//            public void onCancelled(DatabaseError databaseError) {
-//
-//            }
-//        });
     }
 
     private void initializeDate(String uid) {
@@ -589,84 +569,7 @@ public class HomeScreen extends AppCompatActivity {
                         mChart.setVisibleYRangeMaximum(150, YAxis.AxisDependency.LEFT);
                         yAxisLeft.setDrawAxisLine(false);
 
-
-
-                }//NEW Code End
-
-
-
-//                int i = 0;
-//                for (int j = 0;j <= exposureDates.size()-1;j++) {
-//                    Iterable<DataSnapshot> ds = dataSnapshot.child("2021-11-14").getChildren();//TODO use default fetch
-//
-//                    for (DataSnapshot postSnapshot : ds) {
-//
-//
-//                        long ccListCount = postSnapshot.child("ccList").getChildrenCount();
-//                        String dateOfExposure = String.valueOf(postSnapshot.child("date").getValue());
-//
-//                        i++;
-//                        Toast.makeText(getApplicationContext(), ""+postSnapshot, Toast.LENGTH_LONG).show();
-////
-////                        BarEntry entry = new BarEntry(j, ccListCount);
-////                        valueSet1.add(entry);
-////
-////                        dates[j] = dateOfExposure;
-////                        xaxis.setValueFormatter(new IndexAxisValueFormatter(dates));
-//                    }
-//                }
-
-                /*
-                 * Boundary
-                 */
-
-//                for (Date date = start.getTime(); start.before(end); start.add(Calendar.DATE, 1), date = start.getTime()) {
-//                    i += 1;
-//
-//                    Toast.makeText(getApplicationContext(), "Loob ng loop "+i, Toast.LENGTH_SHORT).show();
-//                    Iterable<DataSnapshot> ds = dataSnapshot.child(formatter.format(date)).getChildren();
-//
-//                    for (DataSnapshot postSnapshot : ds) {
-//                        Toast.makeText(getApplicationContext(), ""+postSnapshot, Toast.LENGTH_SHORT).show();
-//                        long ccListCount = postSnapshot.child("ccList").getChildrenCount();
-//                        String dateOfExposure = String.valueOf(postSnapshot.child("date").getValue());
-//
-//                        BarEntry entry = new BarEntry(i, ccListCount);
-//                        valueSet1.add(entry);
-//
-//                        dates[i] = dateOfExposure;
-//                        xaxis.setValueFormatter(new IndexAxisValueFormatter(dates));
-//
-//                    }
-//                }
-//                int i = 0;//OLD CODE
-//                for (DataSnapshot postSnapshot: dataSnapshot.getChildren()) {
-//                    Toast.makeText(getApplicationContext(), ""+postSnapshot, Toast.LENGTH_LONG).show();
-//                    i += 1;
-//                    long ccListCount = postSnapshot.child("ccList").getChildrenCount();
-//                    String date = String.valueOf(postSnapshot.child("date").getValue());
-//
-//                    BarEntry entry = new BarEntry(i, ccListCount);
-//                    valueSet1.add(entry);
-//
-//                    dates[i] = date;
-//                    xaxis.setValueFormatter(new IndexAxisValueFormatter(dates));
-//
-//                    YAxis yAxisLeft = mChart.getAxisLeft();
-//                    yAxisLeft.setPosition(YAxis.YAxisLabelPosition.INSIDE_CHART);
-//                    yAxisLeft.setAxisMaximum(10 + .5f);
-//                    yAxisLeft.setAxisMinimum(0 - .5f);
-//                    //yAxisLeft.setAxisMinValue(0f);//setting yAxis start value to 0
-//                    yAxisLeft.setGranularity(1.0f);//setting yAxis values to int
-//                    yAxisLeft.setGranularityEnabled(true);
-//                    mChart.setVisibleYRangeMaximum(150, YAxis.AxisDependency.LEFT);
-////        yAxisLeft.setDrawGridLines(false);
-//                    yAxisLeft.setDrawAxisLine(false);
-////        yAxisLeft.setEnabled(false);
-//
-//
-//
-//                }//OLD CODE END
+                }
                 final Handler handler = new Handler(Looper.getMainLooper());//delay the code a for 1 second
                 handler.postDelayed(new Runnable() {
                     @Override
